@@ -4,6 +4,7 @@ import {UserPosts, UserMessages} from './'
 const UserDashboard = ({userToken, setPostList}) => {
     const [userData, setUserData] = useState({messages:[], posts:[]})
 
+
     async function getUserData() {
         const userDataToken = {
             headers: {
@@ -33,7 +34,6 @@ const UserDashboard = ({userToken, setPostList}) => {
 
     return (
         <div className='user-dashboard'>
-            <h1>{`This is ${userData.username}'s Dashboard`}</h1>
             <div className='dashboard-content'>
                 <UserPosts posts={userData.posts} userToken={userToken} setPostList={setPostList}/>
                 <UserMessages username={userData.username} messages={userData.messages} userToken={userToken}/>

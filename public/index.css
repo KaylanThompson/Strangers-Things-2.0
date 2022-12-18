@@ -1,85 +1,97 @@
 body {
- 
-  font-family: 'Raleway', Arial, sans-serif;
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
+    font-family: "Raleway", Arial, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-color: #f0ede8;
+    display: flex;
+    flex-direction: column;
 }
 
 #navbar {
-  font-family: 'Poller One', Arial, sans-serif;
-  flex-grow: 1;
-  max-height: 10%;
-  min-height: 40px;
-  background-color: #222222;
-  color: cornsilk;
+    font-family: "Poller One", Arial, sans-serif;
+    flex-grow: 1;
+    max-height: 10%;
+    min-height: 40px;
+    background-color: #c7c7bb;
+    color: cornsilk;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.button-div {
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav-link, button {
+  padding: 1rem;
+  margin: 1rem;
+  background-color:#c7c7bb;
+  border: none;
+  text-decoration: underline;
+}
+
+
+.search {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-right: 10px;
-  padding-left: 10px;
+  align-content: center;
+  justify-content: center;
 }
 
-
-.nav-button {
-  padding: 2px;
-  margin: 5px;
+#search-bar {
+  width: 20rem;
 }
 
-input {
-  margin: 5px;
-}
+.post-display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly
 
-#post-display {
-  display: flex;
-  flex-direction: column;
 }
 
 .single-post {
-  border: 1px solid black;
-  margin: 10px;
-  padding: 10px;
-  /* max-height: 15rem; */
-  /* overflow: scroll; */
-
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 20rem;
+    height: 20rem;
+    padding: 1rem;
+    overflow: scroll;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
-.post-display .author {
-  background-color: lightpink;
-}
-
-
-
-/* testing */
 #my-account {
-display: flex;
-flex-direction: column;
-align-items: center;
-align-self: flex-end;
-border: 1px solid black;
-width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-end;
+    border: 1px solid black;
+    width: 40%;
 }
 
 .PostForm {
-  padding: 10px;
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    padding: 10px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
- .PostForm input {
-background-color: ghostwhite;
+.PostForm input {
+    background-color: ghostwhite;
 }
-
 
 .individual-message {
-border: 1px solid black;
-margin: 5px;
-padding-left: 10px;
+    border: 1px solid black;
+    margin: 5px;
+    padding-left: 10px;
 }
 
 .dashboard-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }

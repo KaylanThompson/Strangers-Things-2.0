@@ -36,12 +36,12 @@ const Navbar = ({ userToken, setUserToken }) => {
         <div id="navbar">
             <h2>Stranger's Things</h2>
             {userToken ? (
-                <div>
+                <div className="button-div">
 
                     <NavLink className="nav-link" to="/post"><button>Make New Post</button></NavLink>
                     <NavLink className="nav-link" to="/dashboard"><button>User Dashboard</button></NavLink>
 
-                    <button
+                    <button className="nav-link"
                         onClick={() => {
                             setUserToken(null);
                             localStorage.removeItem("token");
@@ -62,7 +62,7 @@ const Navbar = ({ userToken, setUserToken }) => {
                             Password:
                             <input type="password" name="password-input" />
                         </label>
-                        <input type="submit" value="Log In" />
+                        <input className="nav-link" type="submit" value="Log In" />
                     </form>
 
                     <NavLink className='nav-link' to="/register"><button>Sign Up</button></NavLink>
