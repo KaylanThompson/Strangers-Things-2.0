@@ -34,7 +34,7 @@ const Navbar = ({ userToken, setUserToken }) => {
 
     return (
         <div id="navbar">
-            <h2>Stranger's Things</h2>
+            <h2 id="site-name">Stranger's Things</h2>
             {userToken ? (
                 <div className="button-div">
 
@@ -69,6 +69,7 @@ const Navbar = ({ userToken, setUserToken }) => {
                 </>
             )}
             <NavLink className='nav-link' to="/"><button>Home</button></NavLink>
+            <NavLink className='nav-link' to="/postsDisplay"><button>Posts</button></NavLink>
 
         </div>
     );

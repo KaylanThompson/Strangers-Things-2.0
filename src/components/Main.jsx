@@ -4,7 +4,7 @@ import {
     Route,
     Routes,
 } from "react-router-dom"
-import { Navbar, PostsDisplay, RegistrationForm, PostEditForm, PostCreateForm, UserDashboard } from "./"
+import { Navbar, PostsDisplay, RegistrationForm, PostEditForm, PostCreateForm, UserDashboard, Home} from "./"
 import { getPostList } from "../api"
 
 const Main = () => {
@@ -34,7 +34,7 @@ const Main = () => {
                 />
                 <Routes>
                     <Route
-                        exact path="/"
+                        exact path="/postsDisplay"
                         element={
                             <PostsDisplay
                                 postList={postList}
@@ -75,6 +75,11 @@ const Main = () => {
                         element={
                             <UserDashboard userToken={userToken} setPostList={setPostList}/>}
                             />
+
+                            <Route path="/"
+                            element={
+                                <Home />
+                            } />
                 </Routes>
             </div>
         </BrowserRouter>

@@ -1,25 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Duru+Sans&display=swap');
+
 body {
     font-family: "Raleway", Arial, sans-serif;
     height: 100vh;
     width: 100vw;
     margin: 0;
-    background-color: #f0ede8;
     display: flex;
+    background-color: #778367;
     flex-direction: column;
+    background-image: url("things.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
+
 
 #navbar {
     font-family: "Poller One", Arial, sans-serif;
     flex-grow: 1;
     max-height: 10%;
     min-height: 40px;
-    background-color: #c7c7bb;
-    color: cornsilk;
+    background-color:#778367;
+    color: #002447;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-right: 10px;
     padding-left: 10px;
+    max-height: 10rem;
+}
+
+#site-name {
+    font-family: 'Duru Sans', sans-serif;
+    font-size: 30px;
+}
+
+#logo {
+    width: 20rem;
+    height: 15rem;
 }
 
 .button-div {
@@ -34,7 +52,11 @@ body {
   text-decoration: underline;
 }
 
+.post-page {
+    max-height: 100vh;
+    overflow-y: scroll;
 
+}
 .search {
   display: flex;
   align-content: center;
@@ -45,6 +67,8 @@ body {
   width: 20rem;
 }
 
+
+
 .post-display {
     display: flex;
     flex-direction: row;
@@ -52,7 +76,11 @@ body {
     justify-content: space-evenly
 
 }
-
+#post-header {
+    display: flex;
+    justify-content: center;
+    
+}
 .single-post {
     border: 1px solid black;
     border-radius: 5px;
@@ -87,6 +115,7 @@ body {
 
 .individual-message {
     border: 1px solid black;
+    border-radius: 5px;
     margin: 5px;
     padding-left: 10px;
 }
@@ -94,4 +123,6 @@ body {
 .dashboard-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    max-height: 100vh;
+    overflow-y: scroll;
 }
