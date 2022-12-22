@@ -11,6 +11,7 @@ body {
     background-image: url("things.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+
 }
 
 
@@ -35,10 +36,6 @@ body {
     font-size: 30px;
 }
 
-#logo {
-    width: 20rem;
-    height: 15rem;
-}
 
 .button-div {
     display: flex;
@@ -47,12 +44,15 @@ body {
 .nav-link, button {
   padding: 1rem;
   margin: 1rem;
-  background-color:#c7c7bb;
+  background-color:#778367;
   border: none;
   text-decoration: underline;
 }
 
 .post-page {
+    background-image: url("things.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     max-height: 100vh;
     overflow-y: scroll;
 
@@ -90,6 +90,7 @@ body {
     overflow: scroll;
     margin-bottom: 1rem;
     margin-top: 1rem;
+    background-color: #e7e6d2c7
 }
 
 #my-account {
@@ -118,6 +119,7 @@ body {
     border-radius: 5px;
     margin: 5px;
     padding-left: 10px;
+    background-color:  #e7e6d2c7
 }
 
 .dashboard-content {
@@ -125,4 +127,16 @@ body {
     grid-template-columns: 1fr 1fr;
     max-height: 100vh;
     overflow-y: scroll;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    
+}
+
+.user-dashboard {
+    margin-top: 0;
+    background-image: url("things.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* max-height: 100vh;
+    overflow-y: scroll; */
 }

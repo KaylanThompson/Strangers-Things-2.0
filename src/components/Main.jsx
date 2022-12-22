@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import {
-    BrowserRouter,
-    Route,
-    Routes,
-} from "react-router-dom"
-import { Navbar, PostsDisplay, RegistrationForm, PostEditForm, PostCreateForm, UserDashboard, Home} from "./"
+    Navbar,
+    PostsDisplay,
+    RegistrationForm,
+    PostEditForm,
+    PostCreateForm,
+    UserDashboard,
+    Home
+} from "./"
 import { getPostList } from "../api"
 
 const Main = () => {
@@ -24,17 +28,14 @@ const Main = () => {
         callGetPostList()
     }, [userToken])
 
-    
     return (
         <BrowserRouter>
             <div id="main">
-                <Navbar
-                    userToken={userToken}
-                    setUserToken={setUserToken}
-                />
+                <Navbar userToken={userToken} setUserToken={setUserToken} />
                 <Routes>
                     <Route
-                        exact path="/postsDisplay"
+                        exact
+                        path="/postsDisplay"
                         element={
                             <PostsDisplay
                                 postList={postList}
@@ -45,20 +46,11 @@ const Main = () => {
                     />
                     <Route
                         path="/register"
-                        element={
-                            <RegistrationForm
-                                setUserToken={setUserToken}
-                            />
-                        }
+                        element={<RegistrationForm setUserToken={setUserToken} />}
                     />
                     <Route
                         path="/post"
-                        element={
-                            <PostCreateForm
-                                userToken={userToken}
-                                setPostList={setPostList}
-                            />
-                        }
+                        element={<PostCreateForm userToken={userToken} setPostList={setPostList} />}
                     />
                     <Route
                         path="/edit/:postId"
@@ -70,16 +62,12 @@ const Main = () => {
                             />
                         }
                     />
-                    <Route 
+                    <Route
                         path="/dashboard"
-                        element={
-                            <UserDashboard userToken={userToken} setPostList={setPostList}/>}
-                            />
+                        element={<UserDashboard userToken={userToken} setPostList={setPostList} />}
+                    />
 
-                            <Route path="/"
-                            element={
-                                <Home />
-                            } />
+                    <Route path="/" element={<Home />} />
                 </Routes>
             </div>
         </BrowserRouter>
