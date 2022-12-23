@@ -34,7 +34,7 @@ const SinglePost = ({post, userToken, setPostList, filteredList, setFilteredList
 
     return (
         <div className={post.isAuthor ? "single-post author" : "single-post"}>
-            <h3>{post.title}</h3>
+            <h2>{post.title}</h2>
             <p><b>Seller: </b>{post.author.username}</p>
             <p><b>Location: </b>{post.location}</p>
             <p><b>Price: </b>{post.price}</p>

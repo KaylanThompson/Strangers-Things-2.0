@@ -30,7 +30,7 @@ const PostCreateForm = ({userToken, setPostList}) => {
 
             const newPostList = await getPostList(userToken)
             setPostList(newPostList)
-            navigate('/')
+            navigate('/dashboard')
         } catch (error) {
             console.log('an error happened', error)
             
@@ -41,27 +41,29 @@ const PostCreateForm = ({userToken, setPostList}) => {
 
 
     return (
+        <div className="sell">
         <form className="PostForm" onSubmit={submitNewPost}>
-                <label htmlFor="title">Title <br/>
+                <label htmlFor="title">Title 
                     <input type="text" name="title"/>
                 </label>
-                <label htmlFor="description">Description<br/>
-                    <textarea rows='4' cols='50' name="description" />
+                <label htmlFor="description">
+                    <textarea placeholder="Description of item(s)" rows='2' cols='50' name="description" />
                 </label>
-                <label htmlFor="price">Price<br/>
+                <label htmlFor="price">Price
                     <input type="text" name="price"/>
                 </label>
-                <label htmlFor="location">Location<br/>
+                <label htmlFor="location">Location
                     <input type="text" name="location"/>
                 </label>
-                <label htmlFor="willDeliver">Will Deliver<br/>
+                <label htmlFor="willDeliver">Will Deliver
                     <select name="willDeliver">
                         <option value={false}>No</option>
                         <option value={true}>Yes</option>
                     </select>
                 </label>
-                <input type="submit" value="Submit Post"/>
+                <input id="post-button" type="submit" value="Post For Sale"/>
         </form>
+        </div>
     )
 }
 

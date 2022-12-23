@@ -34,10 +34,10 @@ const MessageForm = ({post, userToken, setPostList}) => {
     }
 
     return (
-        <><p><b>Message Seller</b></p><form className="MessageForm" onSubmit={submitMessage}>
+        <div className="message-form"><p><b>Message Seller</b></p><form className="message-form" onSubmit={submitMessage}>
             <input type='text' value={message} onChange={elem => { setMessage(elem.target.value); } } />
             <input type='submit' value='Send Message' />
-        </form></>
+        </form></div>
     )
 }
 

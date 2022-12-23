@@ -22,16 +22,16 @@ const PostsDisplay = ({ postList, userToken, setPostList }) => {
                 <form className="search" onSubmit={handleSearch}>
                     <input
                         id="search-bar"
-                        type="text"
+                        type="search"
                         placeholder="Search for Items"
                         value={searchStr}
                         onChange={(event) => setSearchStr(event.target.value.toLowerCase())}
                     />
                 </form>
             </div>
-            <div id="post-header">
+            {/* <div id="post-header">
                 <h2>All Posts</h2>
-            </div>
+            </div> */}
             <div className="post-display">
                 {filteredList.length
                     ? filteredList.map((elem) => {

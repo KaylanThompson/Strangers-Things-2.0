@@ -47,34 +47,35 @@ const PostEditForm = ({userToken,postList, setPostList}) => {
     }
 
     return (
+        <div className="sell">
         <form className="PostForm" onChange={handleChange} onSubmit={submitEditPost}>
             
             <label htmlFor="title">
-                Title<br/>
+                Title
                 <input type="text" name="title" defaultValue={currentPost.title}/>
             </label>
             <label htmlFor="description">
-                Description<br/>
                 <textarea rows='4' cols='50' name="description" defaultValue={currentPost.description}/>
             </label>
             <label htmlFor="price">
-                Price<br/>
+                Price
                 <input type="text" name="price" defaultValue={currentPost.price}/>
             </label>
             <label htmlFor="location">
-                Location<br/>
+                Location
                 <input type="text" name="location" defaultValue={currentPost.location}/>
             </label>
             <label htmlFor="willDeliver">
-                Will Deliver<br/>
+                Will Deliver
                 {/* <input type="checkbox" name="willDeliver" checked={currentPost.willDeliver} /> */}
                 <select name="willDeliver" defaultValue={currentPost.willDeliver}>
                         <option value={false}>No</option>
                         <option value={true}>Yes</option>
                 </select>
             </label>
-            <input type="submit" value="Submit Post" />
+            <input id="edit-button" type="submit" value="Edit Post" />
         </form>
+        </div>
     );
 };
 export default PostEditForm;

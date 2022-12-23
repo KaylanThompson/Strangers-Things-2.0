@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { logIn } from "../api"
 import { NavLink, useNavigate } from "react-router-dom"
 
 const Navbar = ({ userToken, setUserToken }) => {
@@ -27,6 +26,7 @@ const Navbar = ({ userToken, setUserToken }) => {
             setUserToken(token)
             localStorage.removeItem("token")
             localStorage.setItem("token", token)
+            navigate('/')
         } catch (error) {
             console.log("there is an error", error)
         }
@@ -40,10 +40,10 @@ const Navbar = ({ userToken, setUserToken }) => {
             {userToken ? (
                 <div className="button-div">
                     <NavLink className="nav-link" to="/post">
-                        <button>Make New Post</button>
+                        <button>Sell Things</button>
                     </NavLink>
                     <NavLink className="nav-link" to="/dashboard">
-                        <button>User Dashboard</button>
+                        <button>User Profile</button>
                     </NavLink>
 
                     <button
@@ -55,16 +55,16 @@ const Navbar = ({ userToken, setUserToken }) => {
                         }}>
                         Log Out
                     </button>
+                    <NavLink className="nav-link" to="/postsDisplay">
+                        <button>Things For Sale</button>
+                    </NavLink>
                     <NavLink className="nav-link" to="/">
                         <button>Home</button>
-                    </NavLink>
-                    <NavLink className="nav-link" to="/postsDisplay">
-                        <button>Posts</button>
                     </NavLink>
                 </div>
             ) : (
                 <>
-                    <form id="login-form" onSubmit={logIn}>
+                    <form className="login-form" onSubmit={logIn}>
                         <label htmlFor="username-input">
                             Username:
                             <input type="text" name="username-input" />
@@ -73,17 +73,17 @@ const Navbar = ({ userToken, setUserToken }) => {
                             Password:
                             <input type="password" name="password-input" />
                         </label>
-                        <input className="nav-link" type="submit" value="Log In" />
+                        <input id="login" className="nav-link" type="submit" value="Log In" />
                     </form>
                     <div className="always-buttons">
                         <NavLink className="nav-link" to="/register">
                             <button>Sign Up</button>
                         </NavLink>
+                        <NavLink className="nav-link" to="/postsDisplay">
+                            <button>Things For Sale</button>
+                        </NavLink>
                         <NavLink className="nav-link" to="/">
                             <button>Home</button>
-                        </NavLink>
-                        <NavLink className="nav-link" to="/postsDisplay">
-                            <button>Posts</button>
                         </NavLink>
                     </div>
                 </>

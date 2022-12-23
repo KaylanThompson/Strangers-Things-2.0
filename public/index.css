@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap');
 
 body {
     font-family: "Raleway", Arial, sans-serif;
@@ -13,12 +13,13 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 
+
 }
 
 
 
 #navbar {
-    font-family: "Poller One", Arial, sans-serif;
+    font-family: 'Josefin Slab', serif;
     flex-grow: 1;
     max-height: 10%;
     min-height: 40px;
@@ -30,7 +31,7 @@ body {
     justify-content: space-between;
     padding-right: 10px;
     padding-left: 10px;
-    max-height: 20rem;
+    /* max-height: 20rem; */
 }
 
 #site-name {
@@ -38,6 +39,7 @@ body {
     color: #652913;
     font-size: 30px;
     margin: 0px;
+
 }
 
 .always-buttons {
@@ -54,11 +56,11 @@ body {
 .nav-link, button {
   background-color:#778367;
   text-decoration: none;
-  font-family: 'Cinzel', serif;
+  font-family: 'Josefin Slab', serif;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
   margin: 0rem .5rem 0rem .5rem;
-  min-width: 10rem;
+  min-width: 8rem;
   border: none;
   padding-bottom: 1rem;
   
@@ -70,16 +72,40 @@ body {
     background-repeat: no-repeat;
     max-height: 100vh;
     overflow-y: scroll;
+    font-family: 'Josefin Slab', serif;
 
 }
 .search {
   display: flex;
   align-content: center;
   justify-content: center;
+  margin-top: 2rem;
 }
 
 #search-bar {
-  width: 20rem;
+  width: 25rem;
+  height: 2rem;
+  background-color:  #e7e6d2d8;
+}
+
+.login-form {
+    padding-bottom: 1rem;
+}
+
+.login-form input {
+    background-color:  #e7e6d2d8;
+    margin: 1rem;
+}
+
+.login-form label {
+    font-size: 20px;
+    color: black;
+}
+
+#login {
+    background-color:#778367;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -94,13 +120,18 @@ body {
 .message-buttons {
 display: flex;
 justify-content: center;
+
 }
 
 .message-buttons button {
     padding: 1rem;
     border-radius: 5px;
     text-decoration: none;
+    font-family: 'Josefin Slab', serif;
+}
 
+.message-form input {
+    font-family: 'Josefin Slab', serif;
 }
 #post-header {
     display: flex;
@@ -116,7 +147,12 @@ justify-content: center;
     overflow: scroll;
     margin-bottom: 1rem;
     margin-top: 1rem;
-    background-color: #e7e6d2c7
+    background-color: #e7e6d2d8;
+    font-family: 'Josefin Slab', serif;
+}
+
+.single-post h2 {
+    text-decoration: underline;
 }
 
 #my-account {
@@ -128,16 +164,40 @@ justify-content: center;
     width: 40%;
 }
 
-.PostForm {
-    padding: 10px;
-    margin: 20px;
+.sell {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
 }
 
-.PostForm input {
-    background-color: ghostwhite;
+.PostForm {
+    margin-top: 5rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e7e6d2d8;
+    font-family: 'Josefin Slab', serif;
+    font-size: 20px; 
+    width: 50rem;
+}
+
+#post-button, #edit-button {
+    background-color:#778367;
+    text-decoration: none;
+    font-family: 'Josefin Slab', serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 1rem;
+    min-width: 8rem;
+    border: none;
+    padding: 1rem;
+
+}
+
+
+.PostForm input, textarea {
+    background-color:  #e7e6d2;
+    margin: .5rem;
 }
 
 .individual-message {
@@ -146,24 +206,21 @@ justify-content: center;
     margin: 5px;
     padding: 1rem;
     width: 20rem;
-    background-color:  #e7e6d2c7;
+    background-color:   #e7e6d2d8;;
+    font-family: 'Josefin Slab', serif;
 
 }
 
 .dashboard-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 1rem;
-
-   
+    column-gap: 1rem;   
     margin-right: 3rem;
     margin-left: 3rem;
     
 }
 
-.user-dashboard {
 
-}
 
 .user-section {
     display: flex;
@@ -172,8 +229,12 @@ justify-content: center;
     background-color:  #e7e6d2c7;
     margin-top: 2rem;
     border-radius: 5px;
-    max-height: 70vh;
+    max-height: 90vh;
     overflow-y: scroll;
     min-width: 25rem;
+}
+
+.user-section h1 {
+    font-family: 'Josefin Slab', serif;
 }
 
