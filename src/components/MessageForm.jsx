@@ -1,8 +1,10 @@
 import React, {useState} from "react";
+import { useNavigate } from "react-router-dom";
 import { getPostList } from "../api";
 
 const MessageForm = ({post, userToken, setPostList}) => {
     const [message, setMessage] = useState('')
+    const navigate = useNavigate()
 
     async function submitMessage(event) {
         event.preventDefault()

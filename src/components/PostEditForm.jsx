@@ -38,10 +38,9 @@ const PostEditForm = ({userToken,postList, setPostList}) => {
         try {
             const response = await fetch("https://strangers-things.herokuapp.com/api/2209-FTB-ET-WEB-FT/posts/"+postId, editToken);
             const result = await response.json();
-            console.log(result)
             const newPostList = await getPostList(userToken)
             setPostList(newPostList)
-            navigate("/"); //I wish this was navigate back instead of navigate home
+            navigate("/dashboard");
         } catch (error) {
             console.log("an error happened", error);
         }

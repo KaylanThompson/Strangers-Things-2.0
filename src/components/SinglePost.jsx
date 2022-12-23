@@ -42,11 +42,10 @@ const SinglePost = ({post, userToken, setPostList, filteredList, setFilteredList
             <p><b>{post.willDeliver ? "Will Deliver" : "No Delivery"}</b></p>
             {userToken
             ? <>{post.isAuthor 
-                ? <>
+                ? <div className="message-buttons">
                     <button onClick={deletePost}>Delete</button>
                     <NavLink to={`/edit/${post._id}`}><button>Edit</button></NavLink>
-                    {post.messages.length > 0 ? <MessagesPanel messageList={post.messages}/> : null}
-                </>
+                </div>
                 :<MessageForm post={post} userToken={userToken} setPostList={setPostList}/>}</>
             : null}
         </div>

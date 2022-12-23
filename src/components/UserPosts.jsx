@@ -7,7 +7,7 @@ const activePosts = posts.filter(element => element.active)
 const [filteredList, setFilteredList] = useState(posts.filter(element => element.active))
 
     return (
-        <div>
+        <div className="user-section">
             <h1>Posts</h1>
             {activePosts.map((post, index) => {
                 post.isAuthor = true
