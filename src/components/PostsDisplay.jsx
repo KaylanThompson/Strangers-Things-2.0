@@ -29,9 +29,6 @@ const PostsDisplay = ({ postList, userToken, setPostList }) => {
                     />
                 </form>
             </div>
-            {/* <div id="post-header">
-                <h2>All Posts</h2>
-            </div> */}
             <div className="post-display">
                 {filteredList.length
                     ? filteredList.map((elem) => {

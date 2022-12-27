@@ -33,18 +33,21 @@ const RegistrationForm = ({ setUserToken }) => {
     }
 
     return (
-        <div className="RegistrationForm" onSubmit={registerNewUser}>
+        <div className="reg">
+        <div className="PostForm" id="reg-form" onSubmit={registerNewUser}>
             <form>
+                <h2>Create A Username and Password To Create An Account</h2>
                 <label htmlFor="username">
                     Username:
-                    <input type="text" name="username" />
+                    <input type="text" name="username" /><br/>
                 </label>
                 <label htmlFor="password">
                     Password:
                     <input type="password" name="password" />
                 </label>
-                <input type="submit" value="Submit" />
+                <input id="reg-button" type="submit" value="Submit" />
             </form>
+        </div>
         </div>
     );
 };

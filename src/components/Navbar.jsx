@@ -39,7 +39,7 @@ const Navbar = ({ userToken, setUserToken }) => {
             </div>
             {userToken ? (
                 <div className="button-div">
-                    <NavLink className="nav-link" to="/post">
+                    <NavLink className="nav-link" to="/post" value="Sell Things">
                         <button>Sell Things</button>
                     </NavLink>
                     <NavLink className="nav-link" to="/dashboard">
